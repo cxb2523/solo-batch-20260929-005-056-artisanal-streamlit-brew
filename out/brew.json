@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "brew-01",
+      "brewedAt": 1789867800000,
+      "temperature": 93.3,
+      "ratio": 15,
+      "duration": 176,
+      "method": "V60"
+    },
+    {
+      "id": "brew-02",
+      "brewedAt": 1790000000000,
+      "temperature": 88.4,
+      "ratio": 16.5,
+      "duration": 210,
+      "method": "Origami"
+    },
+    {
+      "id": "brew-03",
+      "brewedAt": 1790038800000,
+      "temperature": 92,
+      "ratio": 14.33,
+      "duration": 165,
+      "method": ""
+    },
+    {
+      "id": "brew-04",
+      "brewedAt": 1790121600000,
+      "temperature": 100,
+      "ratio": 30,
+      "duration": 3600,
+      "method": "Espresso"
+    },
+    {
+      "id": "brew-05",
+      "brewedAt": 1790244900000,
+      "temperature": 92,
+      "ratio": 15,
+      "duration": 0,
+      "method": ""
+    },
+    {
+      "id": "brew-06",
+      "brewedAt": 1790323200000,
+      "temperature": 90,
+      "ratio": 17,
+      "duration": 200,
+      "method": ""
+    },
+    {
+      "id": "brew-08",
+      "brewedAt": 1790480700000,
+      "temperature": 85,
+      "ratio": 13.34,
+      "duration": 240,
+      "method": ""
+    }
+  ]
+}
