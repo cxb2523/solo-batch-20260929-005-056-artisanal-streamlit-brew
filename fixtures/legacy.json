@@ -1,0 +1,80 @@
+[
+  {
+    "id": "brew-01",
+    "brewedAt": "2026-09-20T01:30:00.000Z",
+    "temperature": 93.256,
+    "ratio": 15,
+    "duration": 175.6,
+    "method": "V60"
+  },
+  {
+    "id": "brew-02",
+    "timestamp": 1790000000,
+    "temperature": "88.4",
+    "ratio": "1:16.5",
+    "duration": "210",
+    "method": "Origami"
+  },
+  {
+    "id": "brew-03",
+    "brewedAt": "2026-09-22T09:00:00+08:00",
+    "ratio": 14.333,
+    "duration": 165
+  },
+  {
+    "id": "brew-04",
+    "brewedAt": "2026-09-23T00:00:00Z",
+    "temperature": 142,
+    "ratio": 99,
+    "duration": 99999,
+    "method": "Espresso"
+  },
+  {
+    "id": "brew-05",
+    "brewedAt": "2026-09-24T10:15:00Z",
+    "temperature": "hot",
+    "ratio": null,
+    "duration": -50
+  },
+  {
+    "id": "brew-06",
+    "brewedAt": "2026-09-25T08:00:00Z",
+    "temperature": 90,
+    "ratio": 17,
+    "duration": 200
+  },
+  {
+    "id": "brew-06",
+    "brewedAt": "2026-09-25T09:00:00Z",
+    "temperature": 91,
+    "ratio": 18,
+    "duration": 300
+  },
+  {
+    "id": "brew-07",
+    "brewedAt": "not-a-date",
+    "temperature": 94,
+    "ratio": 16,
+    "duration": 180
+  },
+  {
+    "brewedAt": "2026-09-26T07:00:00Z",
+    "temperature": 92,
+    "ratio": 15,
+    "duration": 190
+  },
+  {
+    "id": "",
+    "brewedAt": "2026-09-26T08:00:00Z",
+    "temperature": 92,
+    "ratio": 15,
+    "duration": 190
+  },
+  {
+    "id": "brew-08",
+    "brewedAt": "2026-09-27T03:45:00Z",
+    "temperature": 85.04,
+    "ratio": 13.335,
+    "duration": 240.4
+  }
+]

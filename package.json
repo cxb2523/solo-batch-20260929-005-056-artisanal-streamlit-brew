@@ -1,0 +1,13 @@
+{
+  "name": "artisanal-streamlit-brew",
+  "version": "1.0.0",
+  "private": true,
+  "description": "冲煮记录读写通路：写端归一化、读端按需迁移、一次性旧数据升级",
+  "type": "commonjs",
+  "scripts": {
+    "verify": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

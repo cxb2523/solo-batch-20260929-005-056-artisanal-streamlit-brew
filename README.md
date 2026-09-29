@@ -137,3 +137,25 @@ Nebula Cafe was born from a simple question: *Why do cafe dashboards feel like a
 **[![Download](https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/button.svg)](https://zayfern.github.io/artisanal-streamlit-brew-metrics/)**
 
 *— Built with ☕ and Python, for every cafe dreamer out there.*
+
+---
+
+## 🫘 Brew Records — 读写通路与旧数据升级
+
+冲煮记录的读、写、聚合只有一条通路，逻辑全部集中在 `brew-core.js`：
+
+- **写端归一化**：水温（1 位小数）、粉水比（2 位小数）、萃取时长（整数秒）在写入时即按固定精度落盘并盖 `schemaVersion`，读端不再逐次换算。
+- **读端按需迁移**：仅当 `schemaVersion` 落后时补默认值、夹取越界值、按 `id` 去重、剔除时间戳无法解析的条目，并按解析后的时间戳排序。
+- **聚合与报告**：聚合前剔空值，全空指标输出占位符 `—` 而非 `NaN`；趋势图严格按时间戳升序绘制。
+- **一次性升级**：`db.js` 与 `routes/brew.js` 只做存储与路由的薄层封装。
+
+```bash
+npm run verify
+node scripts/upgrade-legacy.mjs --in fixtures/legacy.json --out out/brew.json --report out/report.html
+```
+
+升级器保证幂等与崩溃/并发安全：
+
+- 同一输入连喂两次，产物字节级一致；已升级文件不会被重写。
+- 两个进程同时升级同一文件时，靠 `out` 同级的原子锁目录互斥；未持锁的进程一旦读到最新 `schemaVersion` 的结果立即退出。
+- 落盘前把旧文件原样复制为 `.bak`，再以“同目录临时文件 + rename”原子替换；中途异常不留半成品，原文件保持不变。
